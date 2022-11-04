@@ -16,7 +16,7 @@ public protocol AppContainerDirectoryCategory {
 public class AppContainerDirectory<DirectoryCategory: AppContainerDirectoryCategory> {
 
     let baseURL: URL
-    let url: URL
+    public let url: URL
 
     public init?(name subdirName: String? = nil) {
         if let sysCacheDirURL = FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask).first {
